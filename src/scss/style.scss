@@ -30,11 +30,21 @@ hr {
         ul {
             display: flex;
             align-content: center;
+            @media (max-width: $max-width) {
+                display: none;
+            }
             li {
                 a {
                     padding: 10px;
                     color: #fff;
                 }
+            }
+        }
+        .toggle-menu {
+            display: none;
+
+            @media (max-width: $max-width) {
+                display: block;
             }
         }
     }

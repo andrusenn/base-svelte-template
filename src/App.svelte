@@ -42,10 +42,10 @@
                 <RouterLink title="about" name="about">About</RouterLink>
             </li>
         </ul>
-        <button>MENU</button>
+        <button class="toggle-menu">MENU</button>
     </div>
 </nav>
-<header class="main-header">Header</header>
+<!-- <header class="main-header">Header</header> -->
 <main class="main-content">
     <RouterView use={routes} />
 </main>

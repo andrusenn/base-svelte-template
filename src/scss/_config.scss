@@ -6,7 +6,7 @@ $header-height: 200px;
 $main-height: minmax(0, 1fr);
 $footer-height: min(200px);
 $navType: "static"; // sticky,fixed,static
-
+$header: false;
 // Fonts
 $font-size: 22px;
 $line-height: 1.8rem;
