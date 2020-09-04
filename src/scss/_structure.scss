@@ -1,0 +1,86 @@
+@import "config";
+
+// Mixins
+@mixin bodyNavType($type) {
+    @if $type == "fixed" {
+        grid-template-rows: 0 $header-height $main-height $footer-height;
+    } @else {
+        grid-template-rows: $nav-height $header-height $main-height $footer-height;
+    }
+}
+@mixin navType($type) {
+    @if $type == "sticky" {
+        position: sticky;
+        top: 0;
+    }
+    @if $type == "fixed" {
+        height: $nav-height;
+        width: 100%;
+        position: fixed;
+        top: 0;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    height: auto;
+    min-height: 100%;
+    font-family: sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $font-base-color;
+    //
+    display: grid;
+    grid-template-areas:
+        "nav"
+        "header"
+        "content"
+        "footer";
+    grid-template-columns: minmax(0, 1fr);
+    @include bodyNavType($navType);
+}
+
+.main-nav {
+    grid-area: nav;
+    @include navType($navType);
+}
+
+.main-header {
+    grid-area: header;
+}
+.main-content {
+    grid-area: content;
+    height: auto;
+}
+.main-footer {
+    grid-area: footer;
+}
+// ------------------------------------------------
+// SCROLL -----------------------------------------
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #111;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}

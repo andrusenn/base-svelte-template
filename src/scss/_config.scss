@@ -1,0 +1,13 @@
+$max-width: 767px;
+$min-width: 768px;
+// heights
+$nav-height: 80px;
+$header-height: 200px;
+$main-height: minmax(0, 1fr);
+$footer-height: min(200px);
+$navType: "static"; // sticky,fixed,static
+
+// Fonts
+$font-size: 22px;
+$line-height: 1.8rem;
+$font-base-color: #353839;

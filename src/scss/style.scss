@@ -1,0 +1,51 @@
+@import "structure";
+
+h1 {
+    line-height: 3.6rem;
+}
+ul {
+    list-style: none;
+}
+hr {
+    height: 1px;
+    border: none;
+    background: #ccc;
+    margin: 5px 0;
+}
+
+.main-nav {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr);
+    grid-template-columns: 1fr 7fr;
+    .main-nav-brand {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    }
+    .main-nav-nav {
+        background: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        ul {
+            display: flex;
+            align-content: center;
+            li {
+                a {
+                    padding: 10px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.main-header {
+    background: #888;
+}
+.main-content {
+    background: #eee;
+}
+.main-footer {
+    background: #333;
+}

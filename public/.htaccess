@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+# replace basepath with yours
+RewriteEngine On
+
+# remove trail slash
+RewriteRule ^(.*)/$ svelte/$1 [L,R=301]
+
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /svelte/index.html [L]
+
+</IfModule>

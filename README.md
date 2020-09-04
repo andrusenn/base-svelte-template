@@ -1,3 +1,3 @@
-# base-html-template
+# base-svelte-template
 
-`npx degit andrusenn/base-html-template .`
+`npx degit andrusenn/base-svelte-template .`
