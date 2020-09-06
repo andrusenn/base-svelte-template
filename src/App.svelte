@@ -29,24 +29,26 @@
     }
 </style>
 
-<nav class="main-nav">
-    <div class="main-nav-brand">
-        <RouterLink name="home">BRAND</RouterLink>
-    </div>
-    <div class="main-nav-nav">
-        <ul>
-            <li>
-                <RouterLink title="home" name="home">Home</RouterLink>
-            </li>
-            <li>
-                <RouterLink title="about" name="about">About</RouterLink>
-            </li>
-        </ul>
-        <button class="toggle-menu">MENU</button>
-    </div>
-</nav>
-<!-- <header class="main-header">Header</header> -->
-<main class="main-content">
-    <RouterView use={routes} />
-</main>
-<footer class="main-footer">footer</footer>
+<div class="main-container">
+    <nav class="main-nav">
+        <div class="main-nav-brand">
+            <RouterLink name="home">BRAND</RouterLink>
+        </div>
+        <div class="main-nav-nav">
+            <ul>
+                <li>
+                    <RouterLink title="home" name="home">Home</RouterLink>
+                </li>
+                <li>
+                    <RouterLink title="about" name="about">About</RouterLink>
+                </li>
+            </ul>
+            <button class="toggle-menu">MENU</button>
+        </div>
+    </nav>
+    <!-- <header class="main-header">Header</header> -->
+    <main class="main-content">
+        <RouterView use={routes} />
+    </main>
+    <footer class="main-footer">footer</footer>
+</div>
