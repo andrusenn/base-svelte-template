@@ -62,8 +62,7 @@ body {
 .main-container {
     height: auto;
     min-height: 100%;
-    //
-    display: grid;
+    //;
     @include bodyNavType($navType, $header);
     grid-template-columns: minmax(0, 1fr);
 }
